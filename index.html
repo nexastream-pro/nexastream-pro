@@ -2,13 +2,66 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>NexaStream Pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaStream - Premium Přístup</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #1a1a1a; color: white; }
-        h1 { border-bottom: 2px solid #00ff00; padding-bottom: 10px; }
+        body { font-family: 'Montserrat', sans-serif; background: #0b0f19; color: #e2e8f0; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .nexa-card { background: #141b2d; border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 20px; box-shadow: 0 15px 50px rgba(0,0,0,0.6); max-width: 600px; width: 100%; overflow: hidden; position: relative; }
+        .nexa-card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(90deg, #8b5cf6, #d946ef, #ffd700); }
+        .nexa-title { color: #8b5cf6; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; text-align: center; margin-top: 30px; margin-bottom: 5px; }
+        .nexa-title span { color: #ffd700; }
+        .subtitle { text-align: center; color: #94a3b8; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 30px; }
+        .instruction-box { background: rgba(15, 23, 42, 0.6); border-radius: 12px; padding: 25px; margin: 20px; border: 1px solid #1e293b; }
+        .step { display: flex; align-items: flex-start; margin-bottom: 20px; }
+        .step:last-child { margin-bottom: 0; }
+        .step-number { background: rgba(139, 92, 246, 0.2); color: #a78bfa; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 15px; flex-shrink: 0; border: 1px solid rgba(139, 92, 246, 0.5); }
+        .step-text h5 { color: #f8fafc; font-size: 1.05rem; margin-bottom: 5px; font-weight: 600; }
+        .step-text p { color: #94a3b8; font-size: 0.9rem; margin: 0; line-height: 1.5; }
+        .highlight { color: #ffd700; font-weight: 600; }
+        .btn-support { background: linear-gradient(45deg, #8b5cf6, #d946ef); border: none; color: white; font-weight: 700; font-size: 1.1rem; padding: 15px 30px; border-radius: 12px; transition: all 0.3s; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; display: block; text-align: center; margin: 0 20px 30px 20px; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4); }
+        .btn-support:hover { background: linear-gradient(45deg, #d946ef, #8b5cf6); color: white; box-shadow: 0 0 25px rgba(217, 70, 239, 0.6); transform: translateY(-3px); }
+        .footer-note { text-align: center; font-size: 0.8rem; color: #64748b; padding-bottom: 20px; }
     </style>
 </head>
 <body>
-    <h1>NexaStream Pro – Připravujeme</h1>
+
+<div class="nexa-card">
+    <h1 class="nexa-title">Nexa<span>Stream</span></h1>
+    <div class="subtitle">Získání Premium přístupu</div>
+    
+    <div class="instruction-box">
+        <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-text">
+                <h5>Podpořte projekt</h5>
+                <p>Klikněte na tlačítko níže a podpořte vývoj doplňku libovolnou částkou přes bezpečnou platformu.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-text">
+                <h5>Zásadní krok: Váš Webshare účet</h5>
+                <p>Při platbě se objeví pole pro <span class="highlight">zkazku / poznámku</span>. Do tohoto pole <strong>musíte</strong> napsat své přihlašovací jméno, které používáte na Webshare!</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-text">
+                <h5>Aktivace kódu</h5>
+                <p>Obratem (případně do několika hodin) vám na e-mail zadaný při platbě dorazí váš unikátní klíč, který zadáte v nastavení Kodi doplňku.</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://www.buymeacoffee.com/TVUJ_PROFIL" target="_blank" class="btn-support">Získat přístup / Podpořit</a>
+    
+    <div class="footer-note">
+        Děkujeme, že pomáháte udržovat projekt bez reklam a neustále aktuální.<br>
+        NexaStream Team
+    </div>
+</div>
+
 </body>
 </html>
