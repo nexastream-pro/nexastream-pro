@@ -22,7 +22,7 @@
             border: 1px solid rgba(139, 92, 246, 0.3);
             border-radius: 20px;
             padding: 40px;
-            max-width: 600px;
+            max-width: 700px; /* Zvětšeno pro 3 položky vedle sebe */
             text-align: center;
             box-shadow: 0 15px 40px rgba(0,0,0,0.5);
         }
@@ -37,21 +37,64 @@
             text-align: left;
             border-left: 4px solid #ffd700;
         }
-        .revolut-btn {
-            display: inline-block;
-            background: #000000;
-            color: white;
-            text-decoration: none;
-            padding: 15px 30px;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            border: 2px solid #fff;
-            transition: 0.3s;
-            margin-top: 15px;
+        
+        /* Hlavní kontejner pro vodorovnou řadu (Logo + QR) */
+        .support-row {
+            display: flex;
+            justify-content: center; /* Vycentruje položky v řádku */
+            align-items: center; /* Vycentruje položky svisle */
+            gap: 40px; /* Mezera mezi položkami */
+            margin-top: 40px;
+            flex-wrap: nowrap; /* Zaručí přísnou vodorovnou řadu na desktopu */
         }
-        .revolut-btn:hover { background: #1a1a1a; transform: translateY(-2px); }
-        .revolut-tag { color: #d946ef; font-family: monospace; font-size: 1.2rem; display: block; margin-top: 10px;}
+        
+        /* Styl pro boxy s QR kódy */
+        .qr-box {
+            background: #1e293b;
+            padding: 15px;
+            border-radius: 15px;
+            border: 1px solid rgba(139, 92, 246, 0.5);
+            text-align: center;
+            transition: transform 0.3s ease;
+            width: 170px; /* Pevná šířka pro zarovnání */
+        }
+        .qr-box img {
+            width: 140px;
+            height: 140px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .qr-box p {
+            margin: 0;
+            font-weight: 600;
+            color: #ffd700;
+            font-size: 0.8rem;
+        }
+        
+        /* Styl pro box s logem */
+        .logo-box {
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        .support-logo {
+            height: 100px; /* Pevná výška loga pro zarovnání */
+            width: auto;
+            display: block;
+        }
+
+        /* Hover efekty pro všechny položky v řadě */
+        .qr-box:hover, .logo-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Responzivita pro malé mobily */
+        @media (max-width: 600px) {
+            .support-row {
+                flex-wrap: wrap; /* Na mobilech pod sebe */
+                gap: 20px;
+            }
+            .card { padding: 20px; }
+        }
     </style>
 </head>
 <body>
@@ -67,10 +110,26 @@
             Udržet doplněk v chodu a neustále ho plnit novým obsahem ale stojí nemalé úsilí a prostředky. Váš dobrovolný příspěvek tak nepůjde jen na kávu pro vývojáře, ale <strong>přímo podpoří naše uploadery</strong>, bez kterých by tento projekt jednoduše neexistoval.
         </div>
 
-        <p>Pokud se vám doplněk líbí a chcete nás podpořit v další práci, budeme vděční za jakýkoliv příspěvek přes Revolut.</p>
+        <p>Líbí se vám naše práce? Budeme rádi za vaši podporu.</p>
 
-        <a href="https://revolut.me/nexastream" target="_blank" class="revolut-btn">Podpořit přes Revolut</a>
-        <span class="revolut-tag">@nexastream</span>
+        <div class="support-row">
+            
+            <div class="qr-box">
+                <img src="qr_revolut.png" alt="QR kód Revolut">
+                <p>Příspěvek přes Revolut</p>
+            </div>
+            
+            <div class="logo-box">
+                <img src="icon.png" alt="NexaStream Logo" class="support-logo">
+            </div>
+            
+            <div class="qr-box">
+                <img src="qr_web.png" alt="QR kód Web">
+                <p>Odkaz na tento web</p>
+            </div>
+           <span class="revolut-tag">Nebo napřímo: @nexastream</span> 
+        </div>
+
     </div>
 
 </body>
