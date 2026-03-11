@@ -22,12 +22,13 @@
             border: 1px solid rgba(139, 92, 246, 0.3);
             border-radius: 20px;
             padding: 40px;
-            max-width: 700px; /* Zvětšeno pro 3 položky vedle sebe */
+            max-width: 800px;
             text-align: center;
             box-shadow: 0 15px 40px rgba(0,0,0,0.5);
         }
         h1 { color: #8b5cf6; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
         h1 span { color: #ffd700; }
+        
         .mission {
             background: rgba(30, 41, 59, 0.5);
             padding: 20px;
@@ -37,30 +38,34 @@
             text-align: left;
             border-left: 4px solid #ffd700;
         }
-        
-        /* Hlavní kontejner pro vodorovnou řadu (Logo + QR) */
+
         .support-row {
             display: flex;
-            justify-content: center; /* Vycentruje položky v řádku */
-            align-items: center; /* Vycentruje položky svisle */
-            gap: 40px; /* Mezera mezi položkami */
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
             margin-top: 40px;
-            flex-wrap: nowrap; /* Zaručí přísnou vodorovnou řadu na desktopu */
+            flex-wrap: wrap;
         }
-        
-        /* Styl pro boxy s QR kódy */
+
         .qr-box {
             background: #1e293b;
             padding: 15px;
             border-radius: 15px;
             border: 1px solid rgba(139, 92, 246, 0.5);
             text-align: center;
-            transition: transform 0.3s ease;
-            width: 170px; /* Pevná šířka pro zarovnání */
+            transition: all 0.3s ease;
+            width: 160px;
+            cursor: pointer; /* Naznačí, že je to klikací */
+        }
+        .qr-box:hover {
+            transform: translateY(-5px);
+            border-color: #ffd700;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
         }
         .qr-box img {
-            width: 140px;
-            height: 140px;
+            width: 130px;
+            height: 130px;
             border-radius: 10px;
             margin-bottom: 10px;
         }
@@ -68,32 +73,36 @@
             margin: 0;
             font-weight: 600;
             color: #ffd700;
-            font-size: 0.8rem;
-        }
-        
-        /* Styl pro box s logem */
-        .logo-box {
-            transition: transform 0.3s ease;
-            text-align: center;
-        }
-        .support-logo {
-            height: 100px; /* Pevná výška loga pro zarovnání */
-            width: auto;
-            display: block;
+            font-size: 0.75rem;
         }
 
-        /* Hover efekty pro všechny položky v řadě */
-        .qr-box:hover, .logo-box:hover {
-            transform: translateY(-5px);
+        .logo-box img {
+            height: 90px;
+            width: auto;
         }
-        
-        /* Responzivita pro malé mobily */
+
+        /* Styl pro vyskakovací okno (Modal) */
+        #modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            cursor: zoom-out;
+        }
+        #modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 5px solid #141b2d;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+        }
+
         @media (max-width: 600px) {
-            .support-row {
-                flex-wrap: wrap; /* Na mobilech pod sebe */
-                gap: 20px;
-            }
-            .card { padding: 20px; }
+            .support-row { gap: 15px; }
+            .card { padding: 25px; }
         }
     </style>
 </head>
@@ -105,32 +114,33 @@
         
         <div class="mission">
             <strong>Naše vize</strong><br>
-            NexaStream spouštíme s jasným cílem: poskytnout prvotřídní obsah a exkluzivní sbírky naprosto všem, bez nutnosti kupovat jakékoliv přístupové kódy. Věříme, že komunita má být na prvním místě. 
-            <br><br>
-            Udržet doplněk v chodu a neustále ho plnit novým obsahem ale stojí nemalé úsilí a prostředky. Váš dobrovolný příspěvek tak nepůjde jen na kávu pro vývojáře, ale <strong>přímo podpoří naše uploadery</strong>, bez kterých by tento projekt jednoduše neexistoval.
+            NexaStream je postaven na svobodném přístupu k obsahu. Vaše dobrovolné příspěvky nám pomáhají hradit servery a odměňovat uploadery za jejich čas.
         </div>
 
-        <p>Líbí se vám naše práce? Budeme rádi za vaši podporu.</p>
+        <p class="text-sm">Klikněte na kód pro zvětšení a naskenujte mobilem:</p>
 
         <div class="support-row">
-            
-            <div class="qr-box">
+            <div class="qr-box" onclick="openModal('qr_revolut.png')">
                 <img src="qr_revolut.png" alt="QR kód Revolut">
                 <p>Příspěvek přes Revolut</p>
             </div>
             
             <div class="logo-box">
-                <img src="icon.png" alt="NexaStream Logo" class="support-logo">
+                <img src="nexastream_logo_glow.png" alt="Logo">
             </div>
-            
-            <div class="qr-box">
-                <img src="qr_web.png" alt="QR kód Web">
-                <p>Odkaz na tento web</p>
-            </div>
-           <span class="revolut-tag">Nebo napřímo: @nexastream</span> 
         </div>
-
     </div>
+
+    <div id="modal" onclick="this.style.display='none'">
+        <img id="modal-img" src="" alt="Zvětšený QR kód">
+    </div>
+
+    <script>
+        function openModal(src) {
+            document.getElementById('modal-img').src = src;
+            document.getElementById('modal').style.display = 'flex';
+        }
+    </script>
 
 </body>
 </html>
