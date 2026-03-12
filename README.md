@@ -40,7 +40,7 @@ Jelikož jde o privátní projekt, přístup (Kodi doplněk + klíč) rozdávám
 
 1. **Ukažte zájem (Hlasování):** Dejte tomuto repozitáři ⭐️ **STAR** (hvězdičku) nahoře vpravo. Čím více hvězdiček, tím rychleji projekt otevřeme pro další vlnu!
 2. **Zažádejte o pozvánku:** Vyplňte náš krátký dotazník a dejte nám vědět, zda chcete pouze testovat, nebo se zapojit i jako Uploader s přístupem do našeho VIP CMS systému.
-   👉 **[KLIKNĚTE ZDE PRO ŽÁDOST O POZVÁNKU - Odkaz na formulář]**
+   👉 **[KLIKNĚTE ZDE PRO ŽÁDOST O POZVÁNKU - https://forms.gle/cxMgdkbjeMpvyjun8]**
 3. **Zapojte se do diskuze:** Máte nápad? Narazili jste na problém? Přejděte do záložky **[Discussions](#)** zde na GitHubu a řekněte nám svůj názor!
 
 ---
