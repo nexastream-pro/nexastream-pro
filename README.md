@@ -27,7 +27,22 @@ Pro chod projektu jsme vyvinuli vlastní "Master CMS". Tvorba databáze nikdy ne
 ## 🆕 Poslední velké aktualizace (Changelog)
 * **[REFACTOR]** Odstraněn zastaralý HTML ČSFD scraper z Kodi (zrychlení doplňku, ochrana proti IP banům).
 * **[NEW]** Implementováno bezpečné API zabezpečené tokenem mezi Kodi a databází.
-* **[FIX]** Chytrá výhybka pro epizody seriálů – přiřazování záložních hodnot audia a dabingu při selhání detekce zdrojového souboru.
+* **[FIX]** Chytrá výhybka pro epizody seriálů – přiřazování záložních hodnot audia a dabingu při selhání detekce zdrojového souboru.Changelog — NexaStream
+​Všechny významné změny v tomto projektu budou dokumentovány v tomto souboru.
+​[3.8.0] — 2026-03-18
+​🚀 Novinky a "Engine" změny
+​Auto-play Logic: Implementována inteligentní vrstva pro automatické navazování epizod. Systém nyní predikuje a připravuje další stream bez nutnosti interakce uživatele.
+​Deep Search 2.0: Rozšířené vyhledávací jádro. Podpora pro indexaci herců, režisérů a vizuální interpretaci globálních trendů v reálném čase.
+​Wishlist Integration: Nasazen tichý komunikační protokol mezi klientem a serverem. Požadavky na nedostupný obsah jsou nyní automaticky prioritizovány pro uploader tým.
+​Rating Overlay: Přímá integrace hodnocení do UI vrstvy seznamů. Vizuální indikace kvality titulu je nyní součástí primárního labelu.
+​🛡️ Kids World (Dětský svět)
+​Profilová izolace: Kompletní oddělení historie hledání a sledování pro dětské uživatele.
+​Smart Filter: Automatická filtrace filmografií herců v dětském režimu — zobrazuje se pouze obsah s odpovídajícím věkovým ratingem.
+​🛠️ Opravy a optimalizace
+​UI Stability: Opraven kritický bug "Empty Click" u navigačních hlaviček (implementován self-refresh pattern).
+​History Management: Přidána možnost granulárního mazání historie (per-item) namísto plošného promazávání.
+​Code Cleanup: Odstraněny legacy moduly pro VOD služby a neaktivní API endpointy. Optimalizace paměťové náročnosti při renderování velkých seznamů.
+​Zlaté řazení: Refaktorována logika prioritizace VIP streamů a řazení variant podle datového objemu.
 
 ---
 
