@@ -1,48 +1,51 @@
-# 🚀 NexaStream (Kodi Addon & CMS)
-> Ultimátní, bleskově rychlý a exkluzivní streamovací ekosystém pro Kodi, postavený na privátní databázi a špičkovém administračním rozhraní.
+# 🎬 NexaStream - Kodi Addon (VIP Gold Edition)
 
-NexaStream není jen další doplněk. Je to kompletně přepsaná architektura, která spojuje **stabilitu oficiálního TMDB API**, **oblíbená hodnocení z ČSFD** a **vlastní zabezpečenou databázi** prověřených streamů v té nejvyšší kvalitě.
+NexaStream je prémiový Kodi doplněk navržený pro maximální pohodlí, rychlost a vizuální zážitek ze sledování filmů a seriálů. Spojuje obrovskou databázi obsahu s inteligentními funkcemi, které znáte z moderních streamovacích platforem.
 
+## 🚀 Hlavní funkce (Co umíme)
+
+* **Smart Autoplay (Netflix Styl):** Nepřerušované sledování! Stačí kliknout na epizodu a doplněk automaticky vybere nejvyšší kvalitu a plynule přehraje zbytek série. Plná podpora pro oblíbený doplněk **Up Next**!
+* **VIP Trezor & Český Dabing:** Exkluzivní sekce s ručně tříděným obsahem v té nejvyšší kvalitě (4K, UHD) s primárním zaměřením na CZ dabing.
+* **Dětský svět (Kids Mode):** Bezpečná a oddělená sekce plná pohádek, oblíbených večerníčků a animáků. 100% ochrana před obsahem pro dospělé.
+* **Auto-Healing Metadata:** Bleskové načítání i složek se 100+ díly díky vnitřní paměti (Cache). Doplněk si sám na pozadí doplňuje chybějící české názvy, popisy a plakáty z TMDB.
+* **Barevné hodnocení ČSFD a TMDB:** Ihned vidíte, na co má smysl koukat. Originální barevné škály ČSFD (🔴🔵⚪) přímo v názvech titulů.
+* **Chytré vyhledávání a Wishlist:** Pokročilé hledání podle herců, žánrů nebo roků. Pokud něco nenajdete, doplněk to tiše odešle jako "Poptávku" na náš server a brzy to přidáme do Trezoru!
+* **Plná personalizace (Možnosti nastavení):**
+    * Volba mezi Autoplayem a manuálním výběrem kvality.
+    * Možnost skrýt celé sekce (např. Dětský svět) z hlavního menu pro čistší vzhled.
+    * Omezovač dat (nastavení maximálního rozlišení pro pomalejší internet).
+    * Vlastní nastavení procent (70–95 %) pro automatické označení filmu za "Zhlédnutý".
+* **Lokální stahování:** Možnost stáhnout si jakýkoliv film nebo epizodu na lokální disk pro sledování offline.
 ---
+## 🆕 Poslední velké aktualizace (Changelog)
+v3.8.0 (Velký Autoplay & Settings Update)
+-----------------------------------------------------------
+[NOVÉ] Smart Autoplay - automatické přehrávání dalších dílů seriálů (Netflix styl).
+[NOVÉ] Plná integrace a podpora pro doplňek Up Next.
+[NOVÉ] Pokročilé Menu Nastavení (Vypínání sekcí v menu, volba zhlédnutých %, omezovač kvality).
+[NOVÉ] Auto-Healing cache systém - bleskové načítání složek se 100+ epizodami bez timeoutů.
+[NOVÉ] Tlačítka pro kompletní smazání historie zhlédnutých a hledání přímo z nastavení.
+[OPRAVA] Opraveno padání (Timeout) Kodi při otevírání seriálů s velkým počtem epizod.
+[OPRAVA] Barevné ČSFD hodnocení opraveno a optimalizováno (vynecháno pro epizody pro maximální rychlost).
+[OPRAVA] SQL optimalizace Trezoru (api.php) - opraveno zahlcení seznamu nejnovějších seriálů jedním titulem.
+[ÚPRAVA] Vyčištění GUI od nepodporovaných Unicode (emoji) znaků pro čistší vzhled na všech zařízeních.
+[ÚPRAVA] Sjednocení API volání na HTTP protokol pro maximální stabilitu a rychlost spojení.
 
-## 🎬 Výhody pro diváky (Kodi Addon)
-NexaStream v Kodi nabízí čistý, rychlý a ničím nerušený zážitek ze sledování.
-* 🌟 **Smart VIP Radar:** Systém okamžitě pozná, že je film v naší exkluzivní databázi. Tyto prémiové linky vystřelí na absolutně první místo ve vyhledávání a označí je zlatou hvězdou.
-* 💯 **Nativní ČSFD Procenta:** U každého našeho filmu rovnou vidíte přesné procentuální hodnocení z ČSFD (barevně odlišené), aniž by Kodi muselo cokoliv zdlouhavě stahovat.
-* ⚡ **Ultra-Rychlé hledání (Unicode Safe):** Kompletně přepsané vyhledávací jádro napojené přímo na TMDB REST API. Bez pádů, bez chyb a s plnou podporou české diakritiky (háčky a čárky už nejsou problém).
-* 🧹 **Čistý design:** Žádný balast v názvech. Naše linky zobrazují pouze čistý název, rozlišení (např. 4K, 1080p), audio, dabing a velikost souboru. 
-* 📚 **Integrace do knihovny:** Přímý export do knihovny Kodi (STRM) a dokonalá synchronizace historie zhlédnutí ("Pokračovat ve sledování").
 
----
+## 🎛️ Chytrý Admin Panel
 
-## ⚙️ NexaStream CMS (Nástroj snů pro Uploadery)
-Pro chod projektu jsme vyvinuli vlastní "Master CMS". Tvorba databáze nikdy nebyla tak pohodlná, rychlá a "blbuvzdorná".
-* 🤖 **Auto-ČSFD Scraper:** Uploader pouze vybere film z TMDB. Náš chytrý cURL robot na pozadí prorazí ochrany a sám vytěží procenta z ČSFD (s chytrou zálohou z TMDB v případě výpadku). 
-* 🎛️ **Live Editor s Náhledem:** Po vložení zdrojového linku se okamžitě vygeneruje náhledový obrázek, vypíše se datový tok (bitrate) a systém pomocí regex map automaticky předvyplní kvalitu, audio a dabing. Uploader má před uložením plnou kontrolu nad finálním štítkem.
-* 🚨 **Skener Mrtvých Linků (Karanténa):** CMS obsahuje zabudovaný radar, který na jedno kliknutí obvolá servery. Pokud najde smazaný soubor, vybublá ho na první místo v tabulce, označí ho jako DEAD a před Kodi ho dočasně skryje. Uploader jej může jediným kliknutím "Opravit".
-* 🏆 **Uploader Leaderboard (Připravujeme):** Systém osobních účtů pro uploadery, kde každý vidí, kolik přispěl do společného Trezoru.
+Aby byl obsah v Kodi vždy stoprocentní, disponuje projekt vlastním administrátorským rozhraním pro správu databáze, které proces nahrávání maximálně automatizuje:
 
----
+* **Hloubkový rentgen odkazů (AJAX):** Konec hádání metadat z názvu souboru! Panel se na pozadí přímo dotazuje API Websharu a stahuje **reálnou kvalitu obrazu (např. 1080p, 4K)** a **skutečnou zvukovou stopu** dříve, než se cokoliv uloží.
+* **Ochrana proti chybám TMDB:** Při nahrávání seriálů panel automaticky křížově kontroluje čísla dílů s databází TMDB. Pokud zadáte S01E111 a TMDB tento díl nezná, panel vás okamžitě vizuálně varuje.
+* **Asynchronní hromadné zpracování:** Možnost vložit desítky linků najednou. Díky modernímu asynchronnímu JavaScriptu se prohlížeč během skenování nesekne a vy ihned vidíte krásný vizuální náhled všech dat.
+* **Auto-párování metadat:** Systém sám z názvů souborů vyextrahuje číslo série a epizody a bleskově je napáruje na oficiální české názvy epizod z TMDB.
 
 ## 🆕 Poslední velké aktualizace (Changelog)
-* **[REFACTOR]** Odstraněn zastaralý HTML ČSFD scraper z Kodi (zrychlení doplňku, ochrana proti IP banům).
-* **[NEW]** Implementováno bezpečné API zabezpečené tokenem mezi Kodi a databází.
-* **[FIX]** Chytrá výhybka pro epizody seriálů – přiřazování záložních hodnot audia a dabingu při selhání detekce zdrojového souboru.Changelog — NexaStream
-​Všechny významné změny v tomto projektu budou dokumentovány v tomto souboru.
-​[3.8.0] — 2026-03-18
-​🚀 Novinky a "Engine" změny
-​Auto-play Logic: Implementována inteligentní vrstva pro automatické navazování epizod. Systém nyní predikuje a připravuje další stream bez nutnosti interakce uživatele.
-​Deep Search 2.0: Rozšířené vyhledávací jádro. Podpora pro indexaci herců, režisérů a vizuální interpretaci globálních trendů v reálném čase.
-​Wishlist Integration: Nasazen tichý komunikační protokol mezi klientem a serverem. Požadavky na nedostupný obsah jsou nyní automaticky prioritizovány pro uploader tým.
-​Rating Overlay: Přímá integrace hodnocení do UI vrstvy seznamů. Vizuální indikace kvality titulu je nyní součástí primárního labelu.
-​🛡️ Kids World (Dětský svět)
-​Profilová izolace: Kompletní oddělení historie hledání a sledování pro dětské uživatele.
-​Smart Filter: Automatická filtrace filmografií herců v dětském režimu — zobrazuje se pouze obsah s odpovídajícím věkovým ratingem.
-​🛠️ Opravy a optimalizace
-​UI Stability: Opraven kritický bug "Empty Click" u navigačních hlaviček (implementován self-refresh pattern).
-​History Management: Přidána možnost granulárního mazání historie (per-item) namísto plošného promazávání.
-​Code Cleanup: Odstraněny legacy moduly pro VOD služby a neaktivní API endpointy. Optimalizace paměťové náročnosti při renderování velkých seznamů.
-​Zlaté řazení: Refaktorována logika prioritizace VIP streamů a řazení variant podle datového objemu.
+[NOVÉ] Chytrý Admin Panel (index.php) - Kompletní přepis logiky pro hromadné přidávání linků.
+[NOVÉ] AJAX skenování Webshare API pro získání reálné kvality a jazyka (namísto parsování z názvu).
+[NOVÉ] Asynchronní chod a ochrana proti zamrznutí prohlížeče při vkládání velkého množství epizod.
+[OPRAVA] Zavedena vizuální křížová kontrola epizod s TMDB přímo v náhledu (prevence "prázdných složek" v Kodi).
 
 ---
 
